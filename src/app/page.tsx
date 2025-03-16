@@ -1,4 +1,4 @@
-import SubscriptionCard from "./subscriptioncard";
+import SubscriptionCard from "../components/subscription-card";
 
 export default function Home() {
   return (
