@@ -61,9 +61,7 @@ const SignIn = () => {
               className="mb-2 h-12 w-full rounded-lg border-2 border-black p-2"
               required
             />
-            <div className="mb-6 text-left text-sm">
-              {error || "‎"}
-            </div>
+            <div className="mb-6 text-left text-sm">{error || "‎"}</div>
             <button
               type="submit"
               className="h-10 w-full rounded-lg border-2 border-black bg-[#0066cc] text-white"
