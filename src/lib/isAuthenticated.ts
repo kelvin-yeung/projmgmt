@@ -13,3 +13,7 @@ export const isAuthenticated = async () => {
     redirect("/signin")
   }
 }
+
+export function sum(a, b) {
+  return a + b;
+}
