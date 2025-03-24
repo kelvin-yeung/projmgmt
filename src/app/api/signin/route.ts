@@ -30,9 +30,9 @@ export async function POST(request: NextRequest) {
   const headersList = await headers(); // https://nextjs.org/docs/app/api-reference/functions/headers
   const authorization = headersList.get("authorization");
 
-  if (authorization.startsWith("Bearer ")) {
+  if (authorization?.startsWith("Bearer ")) {
     // https://youtu.be/kRszxpeTnW0?si=NolHcfclsY5Ww3F_&t=460, check JSON structure of authorization via console.log()
-    const idToken = authorization.split("Bearer ")[1];
+    const idToken = authorization?.split("Bearer ")[1];
     const decodedIdToken = await getAuth().verifyIdToken(idToken); //
 
     if (decodedIdToken) {

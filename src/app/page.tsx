@@ -10,7 +10,7 @@ export default function Home() {
             Proj
           </h1>
           <div className="flex justify-center gap-4">
-          <SubscriptionCard title="TEST"></SubscriptionCard>
+          <SubscriptionCard title="TEST" desc="" fee={0} features=""></SubscriptionCard>
           </div>
         </div>
       </div>

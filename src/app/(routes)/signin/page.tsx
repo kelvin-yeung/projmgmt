@@ -12,7 +12,7 @@ const SignIn = () => {
   const router = useRouter();
   const route = "/signout";
 
-  const onSubmit = async (e) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
@@ -33,7 +33,7 @@ const SignIn = () => {
       }
     } catch (error) {
       // console.error("ERROR: ", error);
-      setError(error.message);
+      // setError(error.message);
     }
   };
 

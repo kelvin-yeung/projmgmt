@@ -12,7 +12,7 @@ const SignUp = () => {
   const router = useRouter();
   const route = "/signin";
 
-  const onSubmit = async (e) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
@@ -22,7 +22,7 @@ const SignUp = () => {
       }
     } catch (error) {
       console.error("ERROR: ", error);
-      setError(error.message);
+      // setError(error.message);
     }
   };
 
