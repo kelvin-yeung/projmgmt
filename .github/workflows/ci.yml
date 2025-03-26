@@ -9,6 +9,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: production
+    env:
+        NEXT_PUBLIC_KEY: ${{ vars.NEXT_PUBLIC_KEY }}
+        FIREBASE_SECRET_KEY: ${{ secrets.FIREBASE_SECRET_KEY }}
     strategy:
       matrix:
         node-version: [22.14.0]
