@@ -46,8 +46,8 @@ export async function POST(request: NextRequest) {
         name: "session",
         value: sessionCookie,
         maxAge: expiresIn,
-        httpOnly: true,
-        secure: true,
+        httpOnly: false, // For testing purposes
+        secure: false, // For testing purposes
       };
 
       // Add the cookie to the browser

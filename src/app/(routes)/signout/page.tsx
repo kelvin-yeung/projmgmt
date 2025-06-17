@@ -7,7 +7,7 @@ const SignOut = () => {
   const route = "/signin";
 
   const signOutUser = async () => {
-    const response = await fetch("http://localhost:3000/api/signout", {
+    const response = await fetch("/api/signout", {
       method: "POST",
     });
     if (response.status === 200) {
@@ -16,7 +16,7 @@ const SignOut = () => {
   };
 
   const isSignedIn = async () => {
-    const response = await fetch("http://localhost:3000/api/signin", {
+    const response = await fetch("/api/signin", {
       method: "GET",
     });
   };
