@@ -28,8 +28,7 @@ COPY . .
 # ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN --mount=type=secret,id=SECRET_FIREBASE_PRIVATE_KEY \
-  export SECRET_FIREBASE_PRIVATE_KEY=$(cat /run/secrets/SECRET_FIREBASE_PRIVATE_KEY) && \
-  npm run build
+  bash -c 'export SECRET_FIREBASE_PRIVATE_KEY=$(cat /run/secrets/SECRET_FIREBASE_PRIVATE_KEY) && npm run build'
 
 RUN \
   if [ -f yarn.lock ]; then yarn run build; \
