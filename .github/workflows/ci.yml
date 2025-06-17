@@ -54,3 +54,5 @@ jobs:
         context: .
         push: true
         tags: yeungkelvin/projmgmt:latest
+        build-args: |
+          SECRET_FIREBASE_PRIVATE_KEY=${{ secrets.SECRET_FIREBASE_PRIVATE_KEY }}
